@@ -12,9 +12,14 @@ int main(void) {
 	for (int i = 0; i < 10; i++) {
 		a = rand() % 10 + 1;
 		p[i] = a;
+
+		for (int j = 0; j < i; j++) {
+			if (p[j] == a)
+				i--;
+		}
 	}
 
 	for (int i = 0; i < 10; i++) {
-		printf("%d ",p[i]);
+		printf("%d ", p[i]);
 	}
 }
